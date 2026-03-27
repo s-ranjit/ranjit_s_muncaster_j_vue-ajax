@@ -4,10 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Front-end</title>
+    <title>Front-end Development of PlayNest Toy Website</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- Link to font family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
+    <h1 class="hidden">Welcome to PlayNest</h1>
+    <div>
+        <section class="full-width-grid-con">
+            <h2 class="hidden">Main Navigation</h2>
+            <header id="main-header" class="full-width-grid-con">
+                <input type="checkbox" id="hamburger">
+                <label for="hamburger" id="ham-burger">
+                    <img src="images/ham-burger-menu.svg" alt="Menu">
+                </label>
+                <div id="logo" class="col-start-1 col-end-2">
+                    <img src="images/playnest_logo.png" alt="Logo">
+                </div>
+
+                <div id="main-nav" class="m-col-start-2 m-col-end-13 l-col-end-12">
+                    <nav class="burger-con">
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">SHOP</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+        </section>
+    </div>
 
 </body>
 

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 331.11 240.45">
+  <!-- Generator: Adobe Illustrator 30.2.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 1)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #fbd5df;
+      }
+
+      .st1 {
+        fill: #231f20;
+        font-family: Quicksand-Medium, Quicksand;
+        font-size: 61.09px;
+        font-weight: 500;
+      }
+
+      .st2 {
+        fill: #e9a3a5;
+      }
+
+      .st3 {
+        fill: #a7bda9;
+      }
+
+      .st4 {
+        fill: #fdca8d;
+      }
+
+      .st5 {
+        fill: #ccebf3;
+      }
+
+      .st6 {
+        fill: #fdd7be;
+      }
+    </style>
+  </defs>
+  <polygon class="st5" points="149.25 0 165.36 27.92 181.49 55.84 149.25 55.84 117 55.84 133.13 27.92 149.25 0"/>
+  <text class="st1" transform="translate(197.72 180.07)"><tspan x="0" y="0">Play</tspan><tspan x="0" y="58.58">Nest</tspan></text>
+  <rect class="st3" y="180.75" width="59.7" height="59.7"/>
+  <rect class="st0" x="59.7" y="121.06" width="59.7" height="59.7"/>
+  <rect class="st4" x="119.4" y="61.36" width="59.7" height="59.7"/>
+  <polygon class="st2" points="179.09 121.06 179.09 240.45 59.7 240.45 59.7 180.75 119.4 180.75 119.4 121.06 179.09 121.06"/>
+  <circle class="st6" cx="86.54" cy="86.95" r="29.85"/>
+</svg>
