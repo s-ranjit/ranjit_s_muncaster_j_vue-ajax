@@ -35,9 +35,53 @@
 
         }
 }
+.aboutus {
+    background-color: abstracts.$primary-color;
+    padding: 50px 0px;
 
+    h3,p  {
+        margin: 20px 0px 40px 0px;
+    }
+    p {
+        font-weight: abstracts.$font-bold;
+    }
+    .btn {
+        text-align: center;
+        background-color: abstracts.$secondary-color;
+        text-decoration: none;
+        color: abstracts.$body-text-color;
+        font-weight: abstracts.$font-bold;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
 @media screen and (min-width: 768px) {
     .hero-image .hero-text h2 {
         font-size: 24px;
     }
+    .aboutus {
+    background-color: abstracts.$primary-color;
+    padding: 20px 0;
+    
+    h3 {
+        font-size: 25px;
+    }
+    p {
+        font-size: 18px;
+        font-weight: abstracts.$font-bold;
+    }
+    h3,p  {
+        margin: 25px 0px 30px 0px;
+    }
+    .btn {
+        text-align: center;
+        background-color: abstracts.$secondary-color;
+        text-decoration: none;
+        color: abstracts.$body-text-color;
+        font-weight: abstracts.$font-bold;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+}
 }
