@@ -44,7 +44,7 @@
 }
 }
 #main-nav {
-  background-color: #fff;
+  background-color: abstracts.$primary-color;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -69,10 +69,11 @@
       margin: 30px 50px 30px 10px;
   
       a {
-         color: abstracts.$primary-color;
+         color: abstracts.$accent-color;
          display: block;
          text-decoration: none;
          font-size: 22px;
+         font-weight: abstracts.$font-bold;
       &:hover {
               color: abstracts.$accent-color;
               transform: scale(1.1);
