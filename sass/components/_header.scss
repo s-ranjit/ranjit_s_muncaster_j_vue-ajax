@@ -13,8 +13,9 @@
      padding: 0 45px;
 
      #logo {
-    width: 80px;
-    height: 80px;
+        margin-top: 30px;
+    width: 90px;
+    height: 90px;
     }
 #ham-burger {
   display: flex;
@@ -97,26 +98,27 @@ transition: 0.3s;
 }
 
 .header-icons i:hover{
-color:abstracts.$accent-color;
+color:abstracts.$blue;
 transform:scale(1.1);
 }
 }
 @media screen and (min-width: 768px) {
  
   #main-header {
-    
+    // margin-top: 30px;
     #ham-burger {
     display: none;
     }
 
     #main-nav {
       width: auto;
-      height: auto;
+      height: 50px;
       position: relative;
       opacity: 1;
       transform: none;
       transition: none;
-      background: none;
+      background-color: abstracts.$primary-color;
+      border-radius: 20px;
       top: 0;
     }
   
@@ -135,10 +137,11 @@ transform:scale(1.1);
 
   #main-nav nav ul li a {
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 5px;
     margin-bottom: 5px;
     transition: none;
-    font-weight: abstracts.$font-regular;
+    font-weight: abstracts.$font-bold;
+    color: abstracts.$accent-color;
   }
   #main-nav nav ul li a:hover {
     color: abstracts.$primary-color;
@@ -154,13 +157,15 @@ transform:scale(1.1);
   }
 
   #main-header {
+    // margin-top: 30px;
     #main-nav {
       position: relative;
       width: auto;
-      height: auto;
+      height: 60px;
       opacity: 1;
       transform: none;
-      background: none;
+      background-color: abstracts.$primary-color;
+      border-radius: 20px;
       top: 0;
       transition: none;
     }
@@ -180,9 +185,10 @@ transform:scale(1.1);
 
   #main-nav nav ul li a {
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 5px;
     transition: none;
+    color: abstracts.$accent-color;
   }
   #main-nav nav ul li a:hover {
     color:abstracts.$accent-color;
