@@ -249,6 +249,32 @@ body {
     font-size: 20px;
   }
 }
+.features {
+  text-align: center;
+  margin-top: 100px;
+}
+.features i {
+  color: #3a3a3a;
+  font-size: 70px;
+  margin: 0px 0px 10px 0px;
+}
+.features #business {
+  color: #E9A3A5;
+}
+.features #leaf {
+  color: #A6BDA9;
+}
+.features #package {
+  color: #FDC98D;
+}
+.features h3, .features p {
+  text-align: center;
+  margin-top: 10px;
+}
+.features p {
+  margin-bottom: 70px;
+}
+
 .hero-image {
   width: 100%;
   margin-top: 100px;
