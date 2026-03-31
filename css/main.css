@@ -308,6 +308,47 @@ body {
   padding: 10px;
 }
 
+.brands {
+  text-align: center;
+  margin-top: 100px;
+}
+.brands h2 {
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+.brands p {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 90px;
+}
+
+.brand-names {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.brand-names img {
+  width: 100%;
+}
+
+.brand-names .content {
+  position: absolute;
+  color: #FEF9F3;
+  text-align: center;
+  width: 45%;
+  margin-top: 100px;
+}
+.brand-names h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.brand-names p {
+  font-size: 11px;
+}
+
 .aboutus {
   background-color: #E9A3A5;
   padding: 50px 0px;
@@ -326,6 +367,30 @@ body {
   font-weight: 700;
   padding: 10px;
   border-radius: 10px;
+}
+.aboutus .brand-names {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.aboutus .brand-names img {
+  width: 100%;
+}
+.aboutus .brand-names .content {
+  position: absolute;
+  color: #FEF9F3;
+  text-align: center;
+  width: 50%;
+  margin-top: 100px;
+}
+.aboutus .brand-names h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.aboutus .brand-names p {
+  font-size: 13px;
 }
 
 @media screen and (min-width: 768px) {
@@ -355,5 +420,31 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .brand-names {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  .brand-names img {
+    width: 100%;
+  }
+  .brand-names .content {
+    position: absolute;
+    color: #FEF9F3;
+    text-align: center;
+    width: 50%;
+    margin-top: 100px;
+  }
+  .brand-names h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+  .brand-names p {
+    font-size: 13px;
   }
 }/*# sourceMappingURL=main.css.map */
