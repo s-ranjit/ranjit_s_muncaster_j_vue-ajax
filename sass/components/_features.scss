@@ -1,0 +1,26 @@
+@use '../abstracts';
+.features {
+    text-align: center;
+    margin-top: 100px;
+    i {
+        color: abstracts.$body-text-color;
+        font-size: 70px;
+        margin: 0px 0px 10px 0px;
+    }
+    #business {
+        color: abstracts.$primary-color;
+    }
+    #leaf {
+        color: abstracts.$green;
+    }
+    #package {
+        color: abstracts.$secondary-color;
+    }
+    h3,p {
+        text-align: center;
+        margin-top: 10px;
+    }
+    p {
+        margin-bottom: 70px;
+    }
+}
