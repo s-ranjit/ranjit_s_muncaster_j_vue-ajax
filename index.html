@@ -175,6 +175,51 @@ Where Play Feels Like Home.</h2>
         </div>
     </article>
 
+    <div class="grid-con" id="app">
+  <div class="col-span-full m-col-start-1 m-col-end-13">
+    <h2>Shop All Toys</h2>
+    <p>From tiny hands to big imaginations, our full collection has something for every stage of play. Explore, discover, and let the fun begin!</p>
+    <p>Click on a toy name to find out more about it</p>
+    <div v-if="loadingBooks">
+      <img class="loader" src="images/loader.svg" alt="Loading Toys">
+    </div>
+    <ul id="book-list" v-else>
+      <li v-for="toy in toysData" :key="toy.id">
+        <h3>
+            Name:
+          <button @click="gettoy(toy.id)">
+            {{toy.name}}
+          </button>
+        </h3>
+      </li>
+    </ul>
+  </div>
+  <div class="col-span-full m-col-start-1 m-col-end-13" ref="bookInfoCon">
+   <div v-if="loadingBookDetails">
+      <img class="loader" src="images/loader.svg" alt="Loading Book Details">
+    </div>
+    <!-- <div v-else-if="error">
+      {{error}}
+    </div> -->
+    <!-- <div v-else-if="selectedBooks" id="info-box">
+      <img :src="selectedBooks.image_url" :alt="selectedBooks.author">
+      <p>
+      <span class="title">Author:</span>
+      {{selectedBooks.author}}
+      </p>
+      <p>
+      <span class="title">Published Year:</span>
+      {{selectedBooks.published}}
+      </p>
+      <p>
+      <span class="title">Description:</span>
+      {{selectedBooks.description}}
+      </p>
+    </div> -->
+  </div>
+
+</div>
+
     </main>
 
     <div class="col-span-full line-separator">
