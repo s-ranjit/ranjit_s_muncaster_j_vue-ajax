@@ -85,6 +85,14 @@
     p {
         font-weight: abstracts.$font-bold;
     }
+    .building-blocks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            border-radius: 40px;
+        }
+    }
     .btn {
         text-align: center;
         background-color: abstracts.$secondary-color;
