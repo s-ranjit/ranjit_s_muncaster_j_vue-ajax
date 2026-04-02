@@ -23,7 +23,7 @@ export function VueJs () {
                 return res.json()
             })
             .then(toys => {
-                this.toysData = toys.data
+                this.toysData = toys;
             })
             .catch(err => {
                 this.error = err.message;
@@ -46,7 +46,7 @@ export function VueJs () {
                 return res.json();
             })
             .then(toy => {
-                if(!toy.data) {
+                if(!toy) {
                     throw new Error("Sorry we are unable to find the toy you requested.")
                 }
 
