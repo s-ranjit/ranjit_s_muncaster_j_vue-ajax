@@ -2,61 +2,62 @@ export function VueJs () {
     const app = Vue.createApp({
     data() {
         return {
-            booksData: [],
+            ToysData: [],
             error: null,
-            selectedBooks: null,
-            loadingBooks: true,
-            loadingBookDetails: false
+            selectedToys: null,
+            loadingToys: true,
+            loadingToyDetails: false
         }
     },
     created() {
-        this.getBooks()
+        this.getToys()
     },
     methods: {
-        getBooks() {
+        getToys() {
             // will be local host/point to laravel api
-            fetch("http://xp-bar.ca/api/books")
+            fetch("http://127.0.0.1:8000/api/toys")
             .then(res => {
                 if(!res.ok) {
-                    throw new Error("Failed to fetch the books");
+                    throw new Error("Failed to fetch the toys");
                 }
                 return res.json()
             })
-            .then(books => {
-                this.booksData = books.data
+            .then(toys => {
+                this.toysData = toys.data
             })
             .catch(err => {
                 this.error = err.message;
             })
             .finally(()=>{
-                this.loadingBooks = false;
+                this.loadingToys = false;
             })
         },
 
-        getBook(id) {
-            this.loadingBookDetails = true;
+        getToy(id) {
+            this.loadingToyDetails = true;
             this.error = null;
-            this.selectedBooks = null;
+            this.selectedToys = null;
 
-            fetch(`http://xp-bar.ca/api/books/${id}`)
+            fetch(`http://127.0.0.1:8000/api/toys/${id}`)
             .then(res => {
                 if(!res.ok){
-                    throw new Error("Failed to fetch book details")
+                    throw new Error("Failed to fetch toy details")
                 }
                 return res.json();
             })
-            .then(book => {
-                if(!book.data) {
-                    throw new Error("Sorry we are unable to find the book you requested.")
+            .then(toy => {
+                if(!toy.data) {
+                    throw new Error("Sorry we are unable to find the toy you requested.")
                 }
 
-                const bookData = book.data
+                const toyData = toy.data
 
-                this.selectedBooks = {
-                    author: bookData.author.name || "Not available",
-                    published: bookData.published || "Not available",
-                    description: bookData.description || "Not available",
-                    image_url: bookData.image_url || ""
+                this.selectedToys = {
+                    toy_name : toyData.toy.toy_name || "Not available",
+                    toy_brand : toyData.toy.toy_brand || "Not available",
+                    toy_description: toyData.toy_description || "Not available",
+                    toy_price: toyData.toy_price || "Not available",
+                    image_url: toyData.image_url || ""
                 }
 
                 this.$nextTick(()=> {
@@ -65,7 +66,7 @@ export function VueJs () {
                         behavior: 'smooth'
                     });
 
-                    gsap.from(this.$refs.bookInfoCon, {
+                    gsap.from(this.$refs.toyInfoCon, {
                         opacity: 0,
                         y: 20,
                         duration: 2,
@@ -77,7 +78,7 @@ export function VueJs () {
                 this.error = err.message;
             })
             .finally(()=>{
-                this.loadingBookDetails = false;
+                this.loadingToyDetails = false;
             });
         }
     }
