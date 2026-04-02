@@ -47,6 +47,16 @@
         font-weight: abstracts.$font-bold;
         margin-bottom: 90px;
     }
+    .brand-names {
+        img {
+            max-width: 85%;
+        }
+    }
+    .star {
+        img {
+            margin-bottom: 90px;
+        }
+    }
 }
 .brand-names {
     position: relative;
@@ -54,10 +64,6 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
-}
-.brand-names img {
-    width: 100%;
-    // display: block;
 }
 .brand-names {
     .content {
@@ -84,6 +90,14 @@
     }
     p {
         font-weight: abstracts.$font-bold;
+    }
+    .building-blocks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            border-radius: 40px;
+        }
     }
     .btn {
         text-align: center;
