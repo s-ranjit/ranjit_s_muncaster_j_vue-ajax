@@ -151,43 +151,47 @@ Where Play Feels Like Home.</h2>
   <div class="col-span-full m-col-start-1 m-col-end-13">
     <h2>Shop All Toys</h2>
     <p>From tiny hands to big imaginations, our full collection has something for every stage of play. Explore, discover, and let the fun begin!</p>
-    <p>Click on a toy name to find out more about it</p>
-    <div v-if="loadingBooks">
+    <!-- <p>Click on a toy name to find out more about it</p> -->
+    <div v-if="loadingToys">
       <img class="loader" src="images/loader.svg" alt="Loading Toys">
     </div>
-    <ul id="book-list" v-else>
+    <ul id="toy-list" v-else>
       <li v-for="toy in toysData" :key="toy.id">
         <h3>
-            Name:
+             {{toy.toy_name}}
           <button @click="gettoy(toy.id)">
-            {{toy.name}}
+            View Details
           </button>
         </h3>
       </li>
     </ul>
   </div>
-  <div class="col-span-full m-col-start-1 m-col-end-13" ref="bookInfoCon">
-   <div v-if="loadingBookDetails">
-      <img class="loader" src="images/loader.svg" alt="Loading Book Details">
+  <div class="col-span-full m-col-start-1 m-col-end-13" ref="toyInfoCon">
+   <div v-if="loadingtoyDetails">
+      <img class="loader" src="images/loader.svg" alt="Loading Toy Details">
     </div>
-    <!-- <div v-else-if="error">
+    <div v-else-if="error">
       {{error}}
-    </div> -->
-    <!-- <div v-else-if="selectedBooks" id="info-box">
-      <img :src="selectedBooks.image_url" :alt="selectedBooks.author">
+    </div>
+    <div v-else-if="selectedToys" id="info-box">
+      <img :src="selectedToys.m_image_url" :alt="selectedToys.toy_name">
       <p>
-      <span class="title">Author:</span>
-      {{selectedBooks.author}}
+      <span class="title">Toy Name:</span>
+      {{selectedToys.toy_name}}
       </p>
       <p>
-      <span class="title">Published Year:</span>
-      {{selectedBooks.published}}
+      <span class="title">Brand:</span>
+      {{selectedToys.toy_brand}}
       </p>
       <p>
       <span class="title">Description:</span>
-      {{selectedBooks.description}}
+      {{selectedToys.toy_description}}
       </p>
-    </div> -->
+      <p>
+      <span class="title">Price:</span>
+      {{selectedToys.toy_price}}
+      </p>
+    </div>
   </div>
 
 </div>
