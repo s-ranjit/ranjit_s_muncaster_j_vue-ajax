@@ -53,8 +53,8 @@ export function VueJs () {
                 const toyData = toy.data
 
                 this.selectedToys = {
+                    brand_name : toy.brand_name || "Not available",
                     toy_name : toy.toy_name || "Not available",
-                    toy_brand : toy.toy_brand || "Not available",
                     toy_description: toy.toy_description || "Not available",
                     toy_price: toy.toy_price || "Not available",
                     m_image_url: toy.m_image_url || ""
