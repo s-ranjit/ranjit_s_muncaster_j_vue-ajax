@@ -2,7 +2,7 @@ export function VueJs () {
     const app = Vue.createApp({
     data() {
         return {
-            ToysData: [],
+            toysData: [],
             error: null,
             selectedToys: null,
             loadingToys: true,
@@ -53,11 +53,11 @@ export function VueJs () {
                 const toyData = toy.data
 
                 this.selectedToys = {
-                    toy_name : toyData.toy.toy_name || "Not available",
-                    toy_brand : toyData.toy.toy_brand || "Not available",
-                    toy_description: toyData.toy_description || "Not available",
-                    toy_price: toyData.toy_price || "Not available",
-                    image_url: toyData.image_url || ""
+                    toy_name : toy.toy_name || "Not available",
+                    toy_brand : toy.toy_brand || "Not available",
+                    toy_description: toy.toy_description || "Not available",
+                    toy_price: toy.toy_price || "Not available",
+                    m_image_url: toy.m_image_url || ""
                 }
 
                 this.$nextTick(()=> {

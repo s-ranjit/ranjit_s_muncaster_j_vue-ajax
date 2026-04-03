@@ -160,7 +160,7 @@ Where Play Feels Like Home.</h2>
       <li v-for="toy in toysData" :key="toy.id">
         <h3>
              {{toy.toy_name}}
-          <button @click="gettoy(toy.id)">
+          <button @click="getToy(toy.id)">
             View Details
           </button>
         </h3>
@@ -168,7 +168,7 @@ Where Play Feels Like Home.</h2>
     </ul>
   </div>
   <div class="col-span-full m-col-start-1 m-col-end-13" ref="toyInfoCon">
-   <div v-if="loadingtoyDetails">
+   <div v-if="loadingToyDetails">
       <img class="loader" src="images/loader.svg" alt="Loading Toy Details">
     </div>
     <div v-else-if="error">
@@ -177,7 +177,6 @@ Where Play Feels Like Home.</h2>
     <div v-else-if="selectedToys" id="info-box">
       <img :src="selectedToys.m_image_url" :alt="selectedToys.toy_name">
       <p>
-      <span class="title">Toy Name:</span>
       {{selectedToys.toy_name}}
       </p>
       <p>
@@ -190,7 +189,7 @@ Where Play Feels Like Home.</h2>
       </p>
       <p>
       <span class="title">Price:</span>
-      {{selectedToys.toy_price}}
+      ${{selectedToys.toy_price}}
       </p>
     </div>
   </div>
