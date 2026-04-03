@@ -1,0 +1,95 @@
+@use '../abstracts';
+
+#toy-list {
+    list-style: none;
+    padding: 0;
+    font-size: 20px; 
+    
+    li {
+        margin-bottom: 10px;
+        color: abstracts.$primary-color;
+        background-color: abstracts.$secondary-color;
+        border-radius: 8px;
+        padding: 10px;
+    }
+    
+    button {
+        background-color: abstracts.$primary-color;
+        border: none;
+        color: abstracts.$accent-color;
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: abstracts.$pink;
+            color: abstracts.$body-text-color;
+        }
+    }
+} 
+
+#info-box {
+    background-color: abstracts.$accent-color;
+    border: 1px solid abstracts.$primary-color;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    // display: flex;
+    // align-items: center;
+
+    
+    img {
+        max-width: 200px;
+        border-radius: 8px;
+        width: 100%;  
+   
+    }
+    p {
+        color: abstracts.$body-text-color;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+.title {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: abstracts.$font-bold;
+    color: abstracts.$primary-color;
+    margin-bottom: 10px;
+}
+.toy-name {
+    font-weight: abstracts.$font-bold;
+}
+.toyinfo {
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    #info-box {
+    img {
+        max-width: 300px;
+        border-radius: 8px;
+        width: 100%;  
+    }
+    p {
+        font-size: 20px;
+    }
+}
+    .title {
+        font-size: 20px;
+    }
+    .toyinfo {
+    margin-top: 80px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    #info-box {
+    p {
+        font-size: 24px;
+    }
+}
+    .title {
+        font-size: 24px;
+    }
+}

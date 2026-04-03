@@ -175,9 +175,12 @@ Where Play Feels Like Home.</h2>
     <div v-else-if="error">
       {{error}}
     </div>
-    <div v-else-if="selectedToys" id="info-box">
+    <div v-else-if="selectedToys" id="info-box"  class="grid-con">
+        <div class="col-span-full m-col-start-1 m-col-end-6">
       <img :src="selectedToys.m_image_url" :alt="selectedToys.toy_name">
-      <p>
+      </div>
+      <div class="col-span-full m-col-start-6 m-col-end-13 toyinfo">
+      <p class="toy-name">
       {{selectedToys.toy_name}}
       </p>
       <p>
@@ -192,6 +195,7 @@ Where Play Feels Like Home.</h2>
       <span class="title">Price:</span>
       ${{selectedToys.toy_price}}
       </p>
+      </div>
     </div>
   </div>
 
