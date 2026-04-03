@@ -150,15 +150,16 @@ Where Play Feels Like Home.</h2>
     </article>
 
   <div class="grid-con" id="app">
-  <div class="col-span-full m-col-start-1 m-col-end-13">
+  <div class="col-span-full m-col-start-1 m-col-end-13 toys">
     <h2>Shop All Toys</h2>
     <p>From tiny hands to big imaginations, our full collection has something for every stage of play. Explore, discover, and let the fun begin!</p>
     <!-- <p>Click on a toy name to find out more about it</p> -->
     <div v-if="loadingToys">
       <img class="loader" src="images/loader.svg" alt="Loading Toys">
     </div>
-    <ul id="toy-list" v-else>
-      <li v-for="toy in toysData" :key="toy.id">
+    <ul id="toy-list" v-else class="grid-con">
+      <li v-for="toy in toysData" :key="toy.id" class="toy-box col-span-2 m-col-span-6 l-col-span-4">
+         
         <h3>
              {{toy.toy_name}}
           <button @click="getToy(toy.id)">
