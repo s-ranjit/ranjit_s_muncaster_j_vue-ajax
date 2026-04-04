@@ -21,7 +21,15 @@
     <link rel="manifest" href="toy_favicon/site.webmanifest">
       <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   
+    <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+    <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+       <!-- link to greensock main library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- link to greensock scroll trigger library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="js/scrolltrigger.js"></script>
+    <script type="module" src="js/main.js"></script>
 
 </head>
 
@@ -51,7 +59,6 @@
                  <div class="header-icons col-start-4 col-end-5 m-col-start-11 m-col-end-13 l-col-start-10 l-col-end-12">
                     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-
                 </div>
             </header>
         </section>
@@ -59,10 +66,10 @@
     <main>
 
 
-       <div class="grid-con hero-image">
-        <img src="images/hero_image.jpg" alt="" class="col-span-full l-col-span-full">
+       <div class="full-width-grid-con hero-image">
+        <img src="images/hero_image.jpg" alt="" class="col-span-full ">
          <div class="hero-text">
-        <h2>Adventure Starts in the Nest,  <br>
+        <h2>Adventure Starts in the Nest, <br>
 Where Play Feels Like Home.</h2>
 
     </div>
@@ -76,68 +83,47 @@ Where Play Feels Like Home.</h2>
         <p class="col-span-full">From cuddly companions to clever learning toys, each brand in our nest is chosen to bring joy, curiosity, and safe fun to your little one. Discover your next favorite today!</p>
 
          <div class="brand-names col-start-1 col-end-3 m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-4">
-            <img src="images/Rectangle 7.svg" alt="Timber Toys">
-            <div class="content">
+            <img src="images/snuggle.svg" alt="SnuggleCo Logo">
+            <!-- <div class="content">
                 <h3>SnuggleCo</h3>
                 <p>Soft, cuddly, and endlessly huggable. SnuggleCo brings comfort and joy to every snuggle.</p>
-            </div>
+            </div> -->
         </div>
         <div class="brand-names col-start-3 col-end-5 m-col-start-4 m-col-end-7 l-col-start-4 l-col-end-7">
-            <img src="images/Rectangle 8.svg" alt="Timber Toys">
-            <div class="content">
+            <img src="images/bloom.svg" alt="Baby Bloom Logo">
+            <!-- <div class="content">
                 <h3>Bright Minds</h3>
                 <p>Stimulate little thinkers with Bright Minds’ smart, engaging toys designed to spark curiosity.</p>
-            </div>
+            </div> -->
         </div>
-        <div class="brand-names col-start-1 col-end-3 m-col-start-7 m-col-end-10 l-col-start-7 l-col-end-10">
-            <img src="images/Polygon 1.svg" alt="Timber Toys">
-            <div class="content">
+        <div class="star col-start-1 col-end-3 m-col-start-7 m-col-end-10 l-col-start-7 l-col-end-10">
+            <img src="images/bright.svg" alt="Bright Minds Logo">
+            <!-- <div class="content">
                 <h3>Bricksy</h3>
                 <p>Build, stack, and imagine! Bricksy turns every playtime into a creative adventure.</p>
-            </div>
+            </div> -->
         </div>
-        <div class="brand-names col-start-3 col-end-5 m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13">
-            <img src="images/Star 1.svg" alt="Timber Toys">
-            <div class="content">
-                <h3>Baby Bloom</h3>
-                <p>Gentle, natural, and full of charm. Baby Bloom helps your little one grow with love and care.</p>
-            </div>
-        </div>
-        <div class="brand-names col-start-1 col-end-3 m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-4">
-            <img src="images/Polygon 1.svg" alt="Timber Toys">
-            <div class="content">
+        <div class="small col-start-3 col-end-5 m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13">
+            <img src="images/timber.svg" alt="Timber Toys Logo">
+            <!-- <div class="content">
                 <h3>Timber Toys</h3>
                 <p>Classic, sturdy, and timeless. Timber Toys crafts quality toys built to last.</p>
-            </div>
-        </div>
-        <div class="brand-names col-start-3 col-end-5 m-col-start-4 m-col-end-7 l-col-start-4 l-col-end-7">
-            <img src="images/Star 1.svg" alt="Timber Toys">
-            <div class="content">
-                <h3>Happy Nest</h3>
-                <p>A cheerful collection of playful wonders, Happy Nest makes every corner of your home a joy.</p>
-            </div>
-        </div>
-        <div class="brand-names col-start-1 col-end-3 m-col-start-7 m-col-end-10 l-col-start-7 l-col-end-10">
-            <img src="images/Rectangle 7.svg" alt="Timber Toys">
-            <div class="content">
-                <h3>Sunny Play</h3>
-                <p>Bright, colourful, and full of fun. Sunny Play toys bring sunshine to every day.</p>
-            </div>
-        </div>
-        <div class="brand-names col-start-3 col-end-5 m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13">
-            <img src="images/Rectangle 8.svg" alt="Timber Toys">
-            <div class="content">
-                <h3>Sound Steps</h3>
-                <p>Little feet, big adventures! Sound Steps toys turn movement into music and discovery.</p>
-            </div>
+            </div> -->
         </div>
        </section>
 
        <article class="aboutus">
         <div class="grid-con">
         <h2 class="hidden">About us</h2>
-        <div>
-        <img src="images/building_blocks.jpg" alt="Building blocks">
+        <div class="col-span-full m-col-start-1 m-col-end-6 l-col-start-1 l-col-end-7 building-blocks" >
+        <img sizes=" (min-width: 992px) 410px,   
+                        (min-width: 768px) 350px,  
+                        (min-width: 412px) 310px, 100vw" srcset="
+                    images/building_blocks_486.jpg 410w, 
+                    images/building_blocks_500.jpg 510w, 
+                    images/building_blocks_600.jpg 610w,
+                    images/building_blocks_700.jpg 710w,
+                    images/building_blocks_800.jpg 810w" src="images/building_blocks_800.jpg" alt="Building blocks">
         </div>
         <div class="col-span-full m-col-start-6 m-col-end-13 l-col-start-7 l-col-end-13">
       <h3>Where Every Toy Tells a Story</h3>
@@ -149,7 +135,7 @@ Where Play Feels Like Home.</h2>
     </article>
 
     <article class="grid-con">
-        <h3 class="hidden">Our Features</h3>
+        <h2 class="hidden">Our Features</h3>
 
         <div class="features col-start-2 col-end-4 m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5">
             <i class="fa-solid fa-store" id="business"></i>
@@ -168,6 +154,58 @@ Where Play Feels Like Home.</h2>
         </div>
     </article>
 
+  <div class="grid-con shop" id="app">
+  <div class="col-span-full m-col-start-1 m-col-end-13 toys">
+    <h2>Shop All Toys</h2>
+    <p>From tiny hands to big imaginations, our full collection has something for every stage of play. Explore, discover, and let the fun begin!</p>
+    <!-- <p>Click on a toy name to find out more about it</p> -->
+    <div v-if="loadingToys">
+      <img class="loader" src="images/loader.svg" alt="Loading Toys">
+    </div>
+    <ul id="toy-list" v-else class="grid-con">
+      <li v-for="toy in toysData" :key="toy.id" class="toy-box col-span-2 m-col-span-6 l-col-span-4">
+         
+        <h3>
+             {{toy.toy_name}}
+          <button @click="getToy(toy.id)">
+            View Details
+          </button>
+        </h3>
+      </li>
+    </ul>
+  </div>
+  <div class="col-span-full m-col-start-1 m-col-end-13" ref="toyInfoCon">
+   <div v-if="loadingToyDetails">
+      <img class="loader" src="images/loader.svg" alt="Loading Toy Details">
+    </div>
+    <div v-else-if="error">
+      {{error}}
+    </div>
+    <div v-else-if="selectedToys" id="info-box"  class="grid-con">
+        <div class="col-span-full m-col-start-1 m-col-end-6">
+      <img :src="selectedToys.m_image_url" :alt="selectedToys.toy_name">
+      </div>
+      <div class="col-span-full m-col-start-6 m-col-end-13 toyinfo">
+      <p class="toy-name">
+      {{selectedToys.toy_name}}
+      </p>
+      <p>
+      <span class="title">Brand:</span>
+      {{selectedToys.brand_name}}
+      </p>
+      <p>
+      <span class="title">Description:</span>
+      {{selectedToys.toy_description}}
+      </p>
+      <p>
+      <span class="title">Price:</span>
+      ${{selectedToys.toy_price}}
+      </p>
+      </div>
+    </div>
+  </div>
+
+</div>
     </main>
 
     <div class="col-span-full line-separator">

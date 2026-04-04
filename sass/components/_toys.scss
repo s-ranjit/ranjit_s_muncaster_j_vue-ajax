@@ -1,0 +1,125 @@
+@use '../abstracts';
+
+.toys {
+    margin-top: 80px;
+    h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+    p {
+        font-size: 18px;
+        color: abstracts.$body-text-color;
+        margin: 30px 0px 30px 0px;
+        font-weight: abstracts.$font-bold;
+        text-align: center;
+    }
+}
+#toy-list {
+    list-style: none;
+    padding: 0;
+    font-size: 16px; 
+    
+    li {
+        margin-bottom: 10px;
+        color: abstracts.$body-text-color;
+        background-color: abstracts.$pink;
+        border: 1px solid abstracts.$primary-color;
+        border-radius: 8px;
+        padding: 20px 0px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    
+    button {
+        background-color: abstracts.$beige;
+        border: none;
+        color: abstracts.$body-text-color;
+        padding: 10px;
+        border-radius: 9px;
+        cursor: pointer;
+        display: block;
+        margin: 10px auto 0 auto;
+        font-weight: abstracts.$font-bold;
+        font-size: 15px;
+        border: 1px solid abstracts.$primary-color;
+
+        &:hover {
+            background-color: abstracts.$primary-color;
+            color: abstracts.$accent-color;
+        }
+    }
+} 
+
+#info-box {
+    background-color: abstracts.$accent-color;
+    border: 2px solid abstracts.$primary-color;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    // display: flex;
+    // align-items: center;
+
+    
+    img {
+        max-width: 200px;
+        border-radius: 8px;
+        width: 100%;  
+   
+    }
+    p {
+        color: abstracts.$body-text-color;
+        font-size: 20px;
+        line-height: 1.5;
+    }
+}
+.title {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: abstracts.$font-bold;
+    color: abstracts.$primary-color;
+    margin-bottom: 10px;
+}
+.toy-name {
+    font-weight: abstracts.$font-bold;
+}
+.toyinfo {
+    margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+    .toys {
+    p {
+        font-size: 20px;
+    }
+}
+#toy-list {
+    font-size: 20px;
+}
+    #info-box {
+    img {
+        max-width: 300px;
+        border-radius: 8px;
+        width: 100%;  
+    }
+    p {
+        font-size: 20px;
+    }
+}
+    .title {
+        font-size: 20px;
+    }
+    .toyinfo {
+    margin-top: 70px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+    #info-box {
+    p {
+        font-size: 24px;
+    }
+}
+    .title {
+        font-size: 24px;
+    }
+}
