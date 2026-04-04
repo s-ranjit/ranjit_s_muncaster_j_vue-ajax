@@ -30,6 +30,22 @@ export function ToyJs () {
             })
             .finally(()=>{
                 this.loadingToys = false;
+                this.$nextTick(()=> {
+                    gsap.from("#toy-list li",{
+                        opacity: 0,
+                        y: 30,
+                        duration: 1,
+                        stagger: 0.2,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                             trigger: "#toy-list li",
+                             toggleActions: "play none none none",
+                             start: "top 85%",
+                              end: "bottom top"
+                         }
+                    })
+                })
+
             })
         },
 

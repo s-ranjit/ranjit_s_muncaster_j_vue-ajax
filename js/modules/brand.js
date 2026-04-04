@@ -30,6 +30,38 @@ export function BrandJs () {
             })
             .finally(()=>{
                 this.loadingBrands = false;
+
+                
+                this.$nextTick(()=> {
+                    gsap.from("#brand-list li",{
+                        opacity: 0,
+                        y: 30,
+                        duration: 1,
+                        stagger: 0.5,
+                        ease: "power2.out",
+                        scrollTrigger: {
+                             trigger: "#brand-list li",
+                             toggleActions: "play none none none",
+                             start: "top 85%",
+                              end: "bottom top"
+                         }
+                    })
+                      gsap.from (".brands", {
+                        opacity: 0,
+                        y: 40,
+                        duration:1,
+                        ease:"power3.out"
+                    })
+
+                    gsap.from (".brand-des", {
+                        opacity: 0,
+                        y: 40,
+                        duration:1,
+                        delay: 0.5,
+                        ease:"power3.out"
+                    })
+                })
+                
             })
         },
         closeLightbox() {
