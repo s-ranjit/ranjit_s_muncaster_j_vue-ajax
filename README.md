@@ -1,27 +1,179 @@
-# 🧸 Toy Store API & Frontend
+# 🧸 Toy Store Vue AJAX - Frontend & Laravel API - Backend
+**Situ Ranjit & Jo Muncaster – Assignment 3**
 
-This project is a full-stack application consisting of:
+This project is a full-stack application consisting of a Laravel backend API and a Vue-based frontend that consumes and displays toy and brand data.
 
-- **Frontend** – Consumes the API and displays toy and brand data  
-- **Backend API (Laravel)** – Handles database, business logic, and RESTful endpoints  
-
+---
+ 
 ## 📚 Table of Contents
 - [Home](#home)
 - [About](#about)
 - [Shop](#shop)
 
+---
 
-## 🌸 Overview
-This project is a responsive toy website built using **Vue.js** which is connected with **Laravel REST API**.
-Front-end mainly focuses on responsive design with data updates and smooth interactions.
+## 📦 Project Overview
 
+- **Frontend (Vue / AJAX)**  
+  Fetches and displays data from the API.
+
+- **Backend (Laravel API)**  
+  Handles database interactions, business logic, and RESTful endpoints.
+
+---
 
 ## 🎨 Features
-- Display a list of toys fetched dynamically from the API
-- Click on a name/image of toy to get detailed information
+- Display a list of toys and brand fetched dynamically from the API
+- Click on a name/image of brand section and click oln view details of toy section to get detailed information
 - Responsive layout for desktop and mobile
 - Loading indicators and error handling 
 
+---
+
+## 🚀 Getting Started
+
+### 1. Clone Both Repositories
+
+```bash
+git clone https://github.com/s-ranjit/ranjit_s_muncaster_j_vue-ajax
+git clone https://github.com/j-muncaster/ranjit_s_muncaster_j_laravel-api
+```
+---
+
+# ⚙️ Backend Setup (Laravel)
+
+### 1. Navigate to Backend Folder
+```bash
+cd ranjit_s_muncaster_j_laravel-api
+```
+
+### 2. Install Dependencies
+```bash
+composer install
+```
+
+### 3. Create Environment File
+```bash
+cp .env.example .env
+```
+
+### 4. Configure Environment Variables
+
+Open `.env` and update your database settings:
+
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=8889  # (Mac MAMP) or 3306 (Windows)
+DB_DATABASE=db_toy_store
+DB_USERNAME=root
+DB_PASSWORD=root  # (Mac) or leave empty for Windows
+```
+
+---
+
+### 5. Create Database
+
+- Start MAMP / WAMP / XAMPP  
+- Open phpMyAdmin  
+- Create a database named:
+
+```
+db_toy_store
+```
+
+---
+
+### 6. Run Migrations & Seed Database
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+---
+
+### 7. Start Laravel Server
+
+```bash
+php artisan serve
+```
+
+Backend will run at :
+```
+http://127.0.0.1:8000
+```
+
+---
+
+## 🔌 API Endpoints
+
+### Brands
+
+| Method | Endpoint           | Description        |
+|--------|------------------|------------------|
+| GET    | `/api/brands`      | Get all brands     |
+| GET    | `/api/brands/{id}` | Get single brand   |
+| POST   | `/api/brands`      | Create brand       |
+| PATCH  | `/api/brands/{id}` | Update brand       |
+| DELETE | `/api/brands/{id}` | Delete brand       |
+
+---
+
+### Toys
+
+| Method | Endpoint         | Description      |
+|--------|----------------|----------------|
+| GET    | `/api/toys`      | Get all toys     |
+| GET    | `/api/toys/{id}` | Get single toy   |
+| POST   | `/api/toys`      | Create toy       |
+| PATCH  | `/api/toys/{id}` | Update toy       |
+| DELETE | `/api/toys/{id}` | Delete toy       |
+
+---
+
+# 🎨 Frontend Setup (Vue)
+
+### 1. Navigate to Frontend Folder
+```bash
+cd ranjit_s_muncaster_j_vue-ajax
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. Run Development Server
+```bash
+npm run dev
+```
+
+Frontend will run at:
+```
+http://localhost:5173
+```
+
+---
+
+## 🔗 Connecting Frontend to Backend
+
+Ensure your frontend is making requests to:
+
+```
+http://127.0.0.1:8000/api
+```
+
+---
+
+## ⚠️ Important Notes
+
+- Make sure the Laravel server is running before starting the frontend  
+- If API requests fail:
+  - Check the API URL in your frontend code  
+  - Ensure CORS is enabled in Laravel  
+- Database must be created **before** running migrations  
+
+---
 
 ## 🎨SASS Workflow
 1. 🎛 Variables (colors, fonts, spacing)
@@ -29,6 +181,7 @@ Front-end mainly focuses on responsive design with data updates and smooth inter
 3. 🧹 Cleaned and easy to understand code and removed unwanted comments
 4. 🗜 Minified output CSS
 
+---
 
 ## 🗂️GitHub Workflow
 1. 🎛 Separate branches according to pages, sections and languages.
@@ -37,67 +190,27 @@ Front-end mainly focuses on responsive design with data updates and smooth inter
 4. 📁Add .gitignore 
 5. 📄Well-written README file 
 
-## 📦 Project Setup Guide
-
-1. Clone the Repositories and Open in VS Code
-git clone https://github.com/s-ranjit/ranjit_s_muncaster_j_vue-ajax
-git clone https://github.com/j-muncaster/ranjit_s_muncaster_j_laravel-api
-
-2. Navigate to Backend Folder
-cd toy-store-api
-
-3. Install Dependencies
-composer install
-
-4. Create Environment File
-cp .env.example .env
-
-5. Configure Database
-Open .env and update:
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=8889 (Mac) or (3306 on Windows)
-DB_DATABASE=db_toy_store
-DB_USERNAME=root
-DB_PASSWORD=root (Mac) or (leave empty for Windows)
-
-6. Create Database
-- Run MAMP / WAMP and open phpmyadmin
-- Create a database named db_toy_store
-
-7. Run Migrations and Seed Database
-php artisan migrate:fresh --seed
-
-8. Start Backend Server
-php artisan serve
-
-9. API Endpoints
-| Method | Endpoint           | Description        |
-| ------ | ------------------ | ------------------ |
-| GET    | `/api/brands`      | Get all brands     |
-| GET    | `/api/brands/{id}` | Get a single brand |
-| POST   | `/api/brands`      | Create a brand     |
-| PATCH  | `/api/brands/{id}` | Update a brand     |
-| DELETE | `/api/brands/{id}` | Delete a brand     |
-
-| Method | Endpoint         | Description      |
-| ------ | ---------------- | ---------------- |
-| GET    | `/api/toys`      | Get all toys     |
-| GET    | `/api/toys/{id}` | Get a single toy |
-| POST   | `/api/toys`      | Create a toy     |
-| PATCH  | `/api/toys/{id}` | Update a toy     |
-| DELETE | `/api/toys/{id}` | Delete a toy     |
-
-10. Open the frontend file and click 'Go Live' at the bottom right of VS Code to view the page.
-
+---
 
 ## 🕰 History
 📆 Created on **March 27, 2026**
 
+---
+
 ## 👨‍💻 Credits
-Designed and Developed by **Situ Ranjit** and **Josephine Muncaster** 🎨
+Designed and Developed by:
+**Situ Ranjit** and **Josephine Muncaster** 🎨
+
+---
 
 ## 📫Contact
 Feel free to reach out to us!  
 
-LinkedIn: [Situ Ranjit](https://www.linkedin.com/in/situ-ranjit-187970325/) , [Josephine Muncaster](https://www.linkedin.com/in/josephine-muncaster-382674135/)
+- [Situ Ranjit – LinkedIn](https://www.linkedin.com/in/situ-ranjit-187970325/)  
+- [Josephine Muncaster – LinkedIn](https://www.linkedin.com/in/josephine-muncaster-382674135/)  
+
+---
+
+## 📄 License
+
+MIT License  

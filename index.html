@@ -97,7 +97,8 @@ Where Play Feels Like Home.</h2>
             <div v-if="loadingBrandDetails">
                 <img class="loader" src="images/loader.svg" alt="Loading Brand Details">
             </div>
-            <div v-else-if="error">{{error}}</div>
+            <div v-else-if="error"  class="error-msg col-span-full">
+                <i class="fa-solid fa-triangle-exclamation"></i> {{error}}</div>
             <div v-else-if="selectedBrands" id="lightbox" class="grid-con">
             <div class="col-span-full m-col-start-1 m-col-end-13 brandinfo">
                 <button class="lightbox_close" @click="closeLightbox">x</button>
@@ -108,7 +109,7 @@ Where Play Feels Like Home.</h2>
                     {{selectedBrands.brand_description}}
                 </p>
                 <p><span class="title-brand">Made in:</span>
-                    {{selectedBrands.brand_description}}
+                    {{selectedBrands.brand_country}}
                 </p>
             </div>
             </div>
@@ -180,9 +181,9 @@ Where Play Feels Like Home.</h2>
    <div v-if="loadingToyDetails">
       <img class="loader" src="images/loader.svg" alt="Loading Toy Details">
     </div>
-    <div v-else-if="error">
-      {{error}}
-    </div>
+      <div v-else-if="error"  class="error-msg col-span-full">
+                <i class="fa-solid fa-triangle-exclamation"></i> {{error}}</div>
+            
     <div v-else-if="selectedToys" id="info-box"  class="grid-con">
         <div class="col-span-full m-col-start-1 m-col-end-6">
       <img :src="selectedToys.m_image_url" :alt="selectedToys.toy_name">
