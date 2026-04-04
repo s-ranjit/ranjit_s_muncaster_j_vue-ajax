@@ -23,10 +23,14 @@ This project is a full-stack application consisting of a Laravel backend API and
 ---
 
 ## 🎨 Features
-- Display a list of toys and brand fetched dynamically from the API
-- Click on a name/image of brand section and click oln view details of toy section to get detailed information
+- Display list of toys and brand fetched dynamically from the Laravel API
+- Clickable brand names/images and "View details" button in toy section to load detailed information
+- Detailed content displayed using lightbox for brand listings.
 - Responsive layout for desktop and mobile
-- Loading indicators and error handling 
+- Scroll Animation using GSAP
+- Loading indicators during API requests
+- Error handling for failed API calls
+- Images and details pulled dynamically from backend database
 
 ---
 
