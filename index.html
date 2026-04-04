@@ -23,6 +23,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
     <script defer src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+       <!-- link to greensock main library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- link to greensock scroll trigger library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+    <script src="js/scrolltrigger.js"></script>
     <script type="module" src="js/main.js"></script>
 
 </head>
@@ -53,7 +59,6 @@
                  <div class="header-icons col-start-4 col-end-5 m-col-start-11 m-col-end-13 l-col-start-10 l-col-end-12">
                     <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
                     <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-
                 </div>
             </header>
         </section>
@@ -130,7 +135,7 @@ Where Play Feels Like Home.</h2>
     </article>
 
     <article class="grid-con">
-        <h3 class="hidden">Our Features</h3>
+        <h2 class="hidden">Our Features</h3>
 
         <div class="features col-start-2 col-end-4 m-col-start-1 m-col-end-5 l-col-start-1 l-col-end-5">
             <i class="fa-solid fa-store" id="business"></i>
@@ -149,7 +154,7 @@ Where Play Feels Like Home.</h2>
         </div>
     </article>
 
-  <div class="grid-con" id="app">
+  <div class="grid-con shop" id="app">
   <div class="col-span-full m-col-start-1 m-col-end-13 toys">
     <h2>Shop All Toys</h2>
     <p>From tiny hands to big imaginations, our full collection has something for every stage of play. Explore, discover, and let the fun begin!</p>

@@ -69,7 +69,7 @@ export function VueJs () {
                     gsap.from(this.$refs.toyInfoCon, {
                         opacity: 0,
                         y: 20,
-                        duration: 2,
+                        duration: 1,
                         ease: "power2.out"
                     })
                 })
