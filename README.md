@@ -3,6 +3,8 @@
 
 This project is a full-stack application consisting of a Laravel backend API and a Vue-based frontend that consumes and displays toy and brand data.
 
+![brand lists](images/readme-placeholder.png)
+
 ---
  
 ## 📚 Table of Contents
