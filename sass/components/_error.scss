@@ -1,0 +1,14 @@
+@use '../abstracts';
+.error-msg {
+    font-size: 20px;
+    color: abstracts.$body-text-color;
+    background-color: abstracts.$pink;
+    border: 1px solid abstracts.$primary-color;
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px 20px;
+    font-weight: abstracts.$font-bold;
+    i {
+        color: crimson;
+    }
+}
