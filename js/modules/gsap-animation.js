@@ -59,8 +59,8 @@ gsap.from(".footer-txt", {
   ease: "power3.out",
   scrollTrigger: {
     trigger: ".footer",
-    toggleActions: "restart pause reverse pause",
-    start: "top 88%",
+    toggleActions: "play none none none",
+    start: "top 90%",
     end: "bottom top"
   }
 });
@@ -103,31 +103,6 @@ gsap.from(".footer-txt", {
     }
   });
 
-  gsap.from(".brands h2", {
-    opacity: 0,
-    y: 40,
-    duration: 1,
-    delay: 1.4,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".brands",
-      start: "top 90%",
-      toggleActions: "play none none none"
-    }
-  });
-
-  gsap.from(".brands p", {
-    opacity: 0,
-    y: 40,
-    duration: 1,
-    delay: 1.6,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".brands",
-      start: "top 90%",
-      toggleActions: "play none none none"
-    }
-  });
 
   gsap.from(".building-blocks img", {
     opacity: 0,
@@ -239,7 +214,7 @@ gsap.from(".footer-txt", {
     stagger: 0.2,
     ease: "power3.out", 
     scrollTrigger: {
-      trigger: ".social-media",
+      trigger: ".social-medias",
       start: "top 90%",
       end: "bottom top"
     }
