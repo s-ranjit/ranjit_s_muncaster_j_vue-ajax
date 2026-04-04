@@ -1,4 +1,4 @@
-export function VueJs () {
+export function ToyJs () {
     const app = Vue.createApp({
     data() {
         return {
@@ -18,7 +18,7 @@ export function VueJs () {
             fetch("http://127.0.0.1:8000/api/toys")
             .then(res => {
                 if(!res.ok) {
-                    throw new Error("Failed to fetch the toys");
+                    throw new Error("Oops! Toy List couldn't be fetched, please try again later!");
                 }
                 return res.json()
             })
@@ -41,7 +41,7 @@ export function VueJs () {
             fetch(`http://127.0.0.1:8000/api/toys/${id}`)
             .then(res => {
                 if(!res.ok){
-                    throw new Error("Failed to fetch toy details")
+                    throw new Error("Sorry! Toy details cannot be fetched, please try again later!")
                 }
                 return res.json();
             })

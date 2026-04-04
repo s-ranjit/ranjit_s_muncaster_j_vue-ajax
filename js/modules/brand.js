@@ -18,7 +18,7 @@ export function BrandJs () {
             fetch("http://127.0.0.1:8000/api/brands")
             .then(res => {
                 if(!res.ok) {
-                    throw new Error("Failed to fetch the brands");
+                    throw new Error("Oops! Brand list couldn't be fetched, please try again later!");
                 }
                 return res.json()
             })
@@ -46,7 +46,7 @@ export function BrandJs () {
             fetch(`http://127.0.0.1:8000/api/brands/${id}`)
             .then(res => {
                 if(!res.ok){
-                    throw new Error("Failed to fetch brand details")
+                    throw new Error("Sorry! Brand details cannot be fetched, please try again later!")
                 }
                 return res.json();
             })
