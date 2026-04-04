@@ -80,16 +80,16 @@ Where Play Feels Like Home.</h2>
 
        <section class="grid-con" id="brandapp">
         <h2 class="col-span-full brands">Our Brands</h2>
-        <p class="col-span-full brand-des">From cuddly companions to clever learning toys, each brand in our nest is chosen to bring joy, curiosity, and safe fun to your little one. Discover your next favorite today!</p>
+        <p class="col-span-full brand-des">From cuddly companions to clever learning toys, each brand in our nest is chosen to bring joy, curiosity, and safe fun to your little one. Click below and know your next favorite today!</p>
 
         <div v-if="loadingBrands">
           <img class="loader" src="images/loader.svg" alt="Loading Brands">
         </div>
 
-        <ul id="brand-list" v-else class="col-span-full m-col-start-2 m-col-end-13">
-            <li v-for="brand in brandsData" :key="brand.id">
+        <ul id="brand-list" v-else class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13">
+            <li v-for="brand in brandsData" :key="brand.id" @click="getBrand(brand.id)">
                 <img :src="brand.brand_image_url" :alt="brand.brand_name">
-                <h3 @click="getBrand(brand.id)">{{brand.brand_name}}</h3>
+                <h3>{{brand.brand_name}}</h3>
             </li>
         </ul>
 

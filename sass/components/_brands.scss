@@ -1,0 +1,108 @@
+@use '../abstracts';
+
+#brand-list {
+    list-style: none;
+    padding: 0;
+    font-size: 16px; 
+    text-align: center;
+    li {
+         display: inline-block;
+         margin: 40px;          
+         padding: 20px 25px;
+         cursor: pointer;
+
+         img {
+            width: 150px;
+            margin-bottom: 30px;
+            filter: drop-shadow(0 0px 15px abstracts.$beige);
+
+            &:hover {
+                transform: scale(1.1);
+            }
+         }
+    }
+} 
+
+#brandapp h3 {
+    font-size: 20px;
+    
+    &:hover {
+        transform: scale(1.1);
+        color: abstracts.$primary-color;
+    }
+}
+
+#lightbox {
+    background-color: abstracts.$pink;
+    border: 1px solid abstracts.$primary-color;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 9999;
+    padding: 25px 20px;
+    width: 400px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    color: abstracts.$body-text-color;
+    font-size: 18px;
+}
+
+.lightbox_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: abstracts.$primary-color;
+    font-size: 30px;
+    font-weight: abstracts.$font-bold;
+
+    &:hover {
+        color: abstracts.$body-text-color;
+    }
+}
+
+.brand-name {
+    font-size: 30px;
+    font-weight: abstracts.$font-bold;
+    margin: 30px 0px 30px 0px;
+    text-align: center;
+}
+.title-brand {
+    font-size: 20px;
+    color: abstracts.$body-text-color;
+    font-weight: abstracts.$font-bold;
+}
+
+@media screen and (min-width:768px){
+    #brandapp h3 {
+        font-size: 25px;
+    }
+
+    #brand-list {
+        li {
+            margin: 20px;
+            padding: 20px 25px;
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+}
+@media screen and (min-width:1200px){
+
+    #brand-list {
+        text-align: center;
+        li {
+            margin: 20px;
+            padding: 20px 25px;
+
+            img {
+                width: 202px;
+            }
+        }
+    }
+}
