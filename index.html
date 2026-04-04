@@ -78,38 +78,40 @@ Where Play Feels Like Home.</h2>
     </div>
        </div>
 
-       <section class="grid-con brands">
-        <h2 class="col-span-full">Our Brands</h2>
-        <p class="col-span-full">From cuddly companions to clever learning toys, each brand in our nest is chosen to bring joy, curiosity, and safe fun to your little one. Discover your next favorite today!</p>
+       <section class="grid-con" id="brandapp">
+        <h2 class="col-span-full brands">Our Brands</h2>
+        <p class="col-span-full brand-des">From cuddly companions to clever learning toys, each brand in our nest is chosen to bring joy, curiosity, and safe fun to your little one. Click below and know your next favorite today!</p>
 
-         <div class="brand-names col-start-1 col-end-3 m-col-start-1 m-col-end-4 l-col-start-1 l-col-end-4">
-            <img src="images/snuggle.svg" alt="SnuggleCo Logo">
-            <!-- <div class="content">
-                <h3>SnuggleCo</h3>
-                <p>Soft, cuddly, and endlessly huggable. SnuggleCo brings comfort and joy to every snuggle.</p>
-            </div> -->
+        <div v-if="loadingBrands">
+          <img class="loader" src="images/loader.svg" alt="Loading Brands">
         </div>
-        <div class="brand-names col-start-3 col-end-5 m-col-start-4 m-col-end-7 l-col-start-4 l-col-end-7">
-            <img src="images/bloom.svg" alt="Baby Bloom Logo">
-            <!-- <div class="content">
-                <h3>Bright Minds</h3>
-                <p>Stimulate little thinkers with Bright Minds’ smart, engaging toys designed to spark curiosity.</p>
-            </div> -->
-        </div>
-        <div class="star col-start-1 col-end-3 m-col-start-7 m-col-end-10 l-col-start-7 l-col-end-10">
-            <img src="images/bright.svg" alt="Bright Minds Logo">
-            <!-- <div class="content">
-                <h3>Bricksy</h3>
-                <p>Build, stack, and imagine! Bricksy turns every playtime into a creative adventure.</p>
-            </div> -->
-        </div>
-        <div class="small col-start-3 col-end-5 m-col-start-10 m-col-end-13 l-col-start-10 l-col-end-13">
-            <img src="images/timber.svg" alt="Timber Toys Logo">
-            <!-- <div class="content">
-                <h3>Timber Toys</h3>
-                <p>Classic, sturdy, and timeless. Timber Toys crafts quality toys built to last.</p>
-            </div> -->
-        </div>
+
+        <ul id="brand-list" v-else class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13">
+            <li v-for="brand in brandsData" :key="brand.id" @click="getBrand(brand.id)">
+                <img :src="brand.brand_image_url" :alt="brand.brand_name">
+                <h3>{{brand.brand_name}}</h3>
+            </li>
+        </ul>
+
+    
+            <div v-if="loadingBrandDetails">
+                <img class="loader" src="images/loader.svg" alt="Loading Brand Details">
+            </div>
+            <div v-else-if="error">{{error}}</div>
+            <div v-else-if="selectedBrands" id="lightbox" class="grid-con">
+            <div class="col-span-full m-col-start-1 m-col-end-13 brandinfo">
+                <button class="lightbox_close" @click="closeLightbox">x</button>
+                <p class="brand-name">
+                    {{selectedBrands.brand_name}}
+                </p>
+                <p><span class="title-brand">Description:</span>
+                    {{selectedBrands.brand_description}}
+                </p>
+                <p><span class="title-brand">Made in:</span>
+                    {{selectedBrands.brand_description}}
+                </p>
+            </div>
+            </div>
        </section>
 
        <article class="aboutus">
